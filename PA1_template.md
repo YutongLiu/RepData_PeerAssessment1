@@ -78,7 +78,7 @@ plot(x=plot2_data$interval,y=plot2_data$average_steps,
      main = "The average number of daily steps of 5-minute interval")
 ```
 
-![plot of chunk plot2](figure/plot2-1.png)
+![plot of chunk plot2](figure/plot2.png)
   
 2.Find the 5-minute interval which contains the maximum number of steps
 
@@ -123,7 +123,7 @@ hist(plot3_data$totalsteps,col = "red",
      ylab = "Frequency",yaxp=c(0,40,4))
 ```
 
-![plot of chunk plot3](figure/plot3-1.png)
+![plot of chunk plot3](figure/plot3.png)
   
 4.And calculate the mean and median using the new dataset
 
@@ -161,14 +161,7 @@ levels(clear_dataset$weekday)<-c("weekday","weekday",
 ```r
 plot4_data<-summarise(group_by(clear_dataset,weekday,interval),average_steps=mean(steps))
 library(lattice)
-xyplot(average_steps~interval|weekday,data=plot4_data,l
-       ayout=c(1,2),type="l",
+xyplot(average_steps~interval|weekday,data=plot4_data,layout=c(1,2),type="l",
        xlab = "5-minute interval",ylab = "Number of steps")
 ```
-
-```
-## Error: <text>:4:8: unexpected symbol
-## 3: xyplot(average_steps~interval|weekday,data=plot4_data,l
-## 4:        ayout
-##           ^
-```
+![plot of chunk plot4](figure/plot4.png)
