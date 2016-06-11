@@ -46,7 +46,7 @@ hist(plot1_data$totalsteps,col = "red",
      ylab = "Frequency",ylim = c(0,30))
 ```
 
-![plot of chunk plot1](figure/plot1-1.png)
+![plot of chunk plot1](figure/plot1.png)
   
 2.And calculate the mean and median of the total number of steps taken each day
 
@@ -151,7 +151,7 @@ The mean is the same as the estimate in the first part, however the median is a 
 ```r
 clear_dataset<-mutate(clear_dataset,
                       weekday=factor(weekdays(date,abbreviate=TRUE),
-                                     levels=c("周一","周二","周三","周四","周五","周六","周日")))
+                                     levels=c("鍛ㄤ竴","鍛ㄤ簩","鍛ㄤ笁","鍛ㄥ洓","鍛ㄤ簲","鍛ㄥ叚","鍛ㄦ棩")))
 levels(clear_dataset$weekday)<-c("weekday","weekday",
                         "weekday","weekday","weekday","weekend","weekend")
 ```
